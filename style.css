@@ -491,25 +491,25 @@
         align-items: center;
     }
 
-    .amigurumis__contenedorcuerpo .img1{
+    .img1{
         grid-area: imagen1;
         border-radius: 10em;
         background-color: var(--color_5);
         display: flex;
         justify-self: center;
         align-self: center;
-        width: 10em;
+        width: 12em;
         border: solid rgb(172, 97, 53) 0.5rem;
     }
 
-    .amigurumis__contenedorcuerpo .img2{
+    .img2{
         grid-area: imagen2;
         border-radius: 10em;
         background-color: var(--color_5);
         display: flex;
         justify-self: center;
         align-self: center;
-        width: 10em;
+        width: 12em;
         border: solid rgb(172, 97, 53) 0.5rem;
     }
 
@@ -520,7 +520,7 @@
         display: flex;
         justify-self: center;
         align-self: center;
-        width: 10em;
+        width: 12em;
         border: solid rgb(172, 97, 53) 0.5rem;
         flex-shrink: 1;
     }
@@ -528,24 +528,24 @@
     .img3:hover{
         opacity: 0%;
         transition-property: opacity;
-        transition-duration: 1.5s;
+        transition-duration: 0.7s;
     }
 
-    .amigurumis__contenedorcuerpo .img4{
+    .img4{
         grid-area: imagen2;
         border-radius: 10em;
         background-color: var(--color_5);
         display: flex;
         justify-self: center;
         align-self: center;
-        width: 10em;
+        width: 12em;
         border: solid rgb(172, 97, 53) 0.5rem;
     }
 
     .img4:hover{
         opacity: 0%;
         transition-property: opacity;
-        transition-duration: 1.5s;  
+        transition-duration: 0.7s;  
     }
 
     .amigurumis__parrafo{
@@ -761,10 +761,19 @@
         font-family: var(--text_family2);
     }
 
-    .contenedorproductos img{
+    .productos__introducción img:hover, .productos__dos img:hover, .productos__tres img:hover, .productos__uno img:hover{
+        filter: brightness(90%) contrast(180%) saturate(120%);
+        transition:0.7s;
+    }
+
+    .productos__uno img, .productos__dos img, .productos__tres img, .productos__introducción img{
         width: 16em;
         border: solid #ac6135;
-        border-radius: 5em;
+        border-radius: 50em;
+    }
+
+    .productos__uno img:hover{
+        transition:0.7;
     }
 
     /*Promociones*/
@@ -812,10 +821,16 @@
         font-size: var(--texzise_text);
     }
 
-    .contenedorpromociones img{
+    .deque__contenedor img{
         width: 15em;
         border: solid #ac6135;
         border-radius: 5em;
+    }
+
+    .donde__contenedor img{
+        width: 15em;
+        border: solid #ac6135;
+        border-radius: 2em;
     }
 
 
@@ -1045,7 +1060,7 @@
     }
     .img1:hover{
         filter: grayscale(0%);
-        transition: 1.5s;
+        transition: 1s;
     }
 
     .img2{
@@ -1062,7 +1077,7 @@
 
     .img2:hover{
         filter: grayscale(0%);
-        transition: 1.5s;
+        transition: 1s;
     }
 
     .img3{
@@ -1286,7 +1301,7 @@
     .productos__introducción img:hover{
         filter: saturate(120%);
         filter: grayscale(0%);
-        transition: 1.5s;
+        transition: 1s;
     }
 
     .productos__uno{
@@ -1323,19 +1338,25 @@
     }
 
     .productos__uno img{
-        width: 16em;
+        width: 18em;
         border: solid #ac6135;
-        border-radius: 5em;
+        border-radius: 50em;
     }
 
     .productos__dos img{
-        width: 16em;
+        width: 18em;
         border: solid #ac6135;
-        border-radius: 5em;
+        border-radius: 50em;
+        filter: grayscale(100%);
+    }
+
+    .productos__dos img:hover{
+        filter: grayscale(0%);
+        transition: 1s;
     }
 
     .productos__tres img{
-        width: 16em;
+        width: 18em;
         border: solid #ac6135;
         border-radius: 50em;
         filter: grayscale(100%);
@@ -1344,7 +1365,7 @@
     .productos__tres img:hover{
         filter: saturate(120%);
         filter: grayscale(0%);
-        transition: 1.5s;
+        transition: 1s;
     }
 
     /*Promociones*/
@@ -1392,10 +1413,23 @@
         font-size: var(--texzise_text);
     }
 
-    .contenedorpromociones img{
-        width: 15em;
+    .deque__contenedor img{
+        width: 20em;
         border: solid #ac6135;
-        border-radius: 5em;
+        border-radius: 50em;
+        filter: grayscale(100%);
+    }
+
+    .contenedorpromociones img:hover{
+        filter: grayscale(0%);
+        transition: 1s;
+    }
+
+    .donde__contenedor img{
+        width: 20em;
+        border-radius: 3em;
+        border: solid #ac6135;
+        filter: grayscale(100%);
     }
 
 
