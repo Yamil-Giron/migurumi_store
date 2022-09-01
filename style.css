@@ -1027,33 +1027,47 @@
         gap: 2em 2em;
         margin-right: 2em;
         margin-left: 2em;
+        max-width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
     }
-
-    .amigurumis__contenedorcuerpo .img1{
+    
+    .img1{
         grid-area: imagen1;
-        border-radius: 10em;
+        border-radius: 30em 15em 30em 30em;
         background-color: var(--color_5);
         display: flex;
         justify-self: center;
         align-self: center;
-        width: 18em;
+        width: 19em;
         border: solid rgb(172, 97, 53) 0.5rem;
     }
+    .img1:hover{
+        filter: saturate(200%);
+        transition: 1s;
+    }
 
-    .amigurumis__contenedorcuerpo .img2{
+
+
+    .img2{
         grid-area: imagen2;
-        border-radius: 10em;
+        border-radius: 30em 30em 30em 15em;
         background-color: var(--color_5);
         display: flex;
         justify-self: center;
         align-self: center;
-        width: 18em;
+        width: 19em;
         border: solid rgb(172, 97, 53) 0.5rem;
     }
 
-    .amigurumis__contenedorcuerpo .img3{
+    .img2:hover{
+        filter: saturate(200%);
+        transition: 1s;
+    }
+
+    .img3{
         grid-area: imagen1;
-        border-radius: 10em;
+        border-radius: 15em;
         background-color: var(--color_5);
         display: flex;
         justify-self: center;
@@ -1064,11 +1078,10 @@
 
     .img3:hover{
         opacity: 0%;
-        transition-property: opacity;
-        transition-duration: 1.5s;
+        transition: 1s;
     }
 
-    .amigurumis__contenedorcuerpo .img4{
+    .img4{
         grid-area: imagen2;
         border-radius: 10em;
         background-color: var(--color_5);
@@ -1081,15 +1094,14 @@
 
     .img4:hover{
         opacity: 0%;
-        transition-property: opacity;
-        transition-duration: 1.5s;  
+        transition: 1s;
     }
 
     .amigurumis__parrafo{
         grid-area: parrafo1;
         background-color: var(--color_5);
         display: flex;
-        justify-content: space-evenly;
+        justify-items: flex-end;
         align-items: center;
         font-size: var(--textzise_text);
         font-family: var(--text_family2);
@@ -1097,6 +1109,8 @@
         border-radius: 5em;
         text-align:center;
         color: var(--color_3);
+        width: max-content;
+        padding: 7%;
     }
 
     /*Como adoptar*/
