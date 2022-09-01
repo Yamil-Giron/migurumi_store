@@ -1034,35 +1034,35 @@
     
     .img1{
         grid-area: imagen1;
-        border-radius: 30em 15em 30em 30em;
+        border-radius: 30em;
         background-color: var(--color_5);
         display: flex;
         justify-self: center;
         align-self: center;
         width: 19em;
         border: solid rgb(172, 97, 53) 0.5rem;
+        filter: grayscale(100%);
     }
     .img1:hover{
-        filter: saturate(200%);
-        transition: 1s;
+        filter: grayscale(0%);
+        transition: 1.5s;
     }
-
-
 
     .img2{
         grid-area: imagen2;
-        border-radius: 30em 30em 30em 15em;
+        border-radius: 30em;
         background-color: var(--color_5);
         display: flex;
         justify-self: center;
         align-self: center;
         width: 19em;
         border: solid rgb(172, 97, 53) 0.5rem;
+        filter: grayscale(100%);
     }
 
     .img2:hover{
-        filter: saturate(200%);
-        transition: 1s;
+        filter: grayscale(0%);
+        transition: 1.5s;
     }
 
     .img3{
@@ -1072,13 +1072,13 @@
         display: flex;
         justify-self: center;
         align-self: center;
-        width: 18em;
+        width: 18.3em;
         border: solid rgb(172, 97, 53) 0.5rem;
     }
 
     .img3:hover{
         opacity: 0%;
-        transition: 1s;
+        transition: 0.5s;
     }
 
     .img4{
@@ -1088,7 +1088,7 @@
         display: flex;
         justify-self: center;
         align-self: center;
-        width: 18em;
+        width: 18.3em;
         border: solid rgb(172, 97, 53) 0.5rem;
     }
 
@@ -1266,12 +1266,27 @@
         text-align: center;
         margin-left: 2em;
     }
+
+
     .productos__introducción{
         grid-area: introducción;
         display:flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;   
+    }
+
+    .productos__introducción img{
+        width: 16em;
+        border: solid #ac6135;
+        border-radius: 50em;
+        filter: grayscale(100%);
+    }
+
+    .productos__introducción img:hover{
+        filter: saturate(120%);
+        filter: grayscale(0%);
+        transition: 1.5s;
     }
 
     .productos__uno{
@@ -1307,10 +1322,29 @@
         font-family: var(--text_family2);
     }
 
-    .contenedorproductos img{
+    .productos__uno img{
         width: 16em;
         border: solid #ac6135;
         border-radius: 5em;
+    }
+
+    .productos__dos img{
+        width: 16em;
+        border: solid #ac6135;
+        border-radius: 5em;
+    }
+
+    .productos__tres img{
+        width: 16em;
+        border: solid #ac6135;
+        border-radius: 50em;
+        filter: grayscale(100%);
+    }
+
+    .productos__tres img:hover{
+        filter: saturate(120%);
+        filter: grayscale(0%);
+        transition: 1.5s;
     }
 
     /*Promociones*/
