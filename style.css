@@ -79,8 +79,11 @@
     .contenedoramigurumis{
         grid-area: amigurumis;
         display:grid;
-        grid: repeat(2,1fr)/1fr;
+        grid: auto auto/1fr;
         grid-template-areas: "titulo" "cuerpo";
+        background-color: var(--color_3);
+        border-radius: 5em;
+        height: min-content;
     }
 
     .amigurumis__contenedortitulo{
@@ -100,8 +103,8 @@
         grid-area: cuerpo;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: "parrafo" "imagen1 imagen2";
+        grid-template-rows: 1fr 0.8fr;
+        grid-template-areas: "parrafo parrafo" "imagen1 imagen2";
     }
 
     .img1{
@@ -109,21 +112,21 @@
         border-radius: 30em;
         background-color: var(--color_5);
         display: flex;
-        justify-content: center;
-        align-content: center;
-        width: 10em;
+        justify-self: center;
+        align-self: center;
+        width: 12em;
         border: solid rgb(172, 97, 53) 0.2rem;
         }
 
     .img2{
-            grid-area: imagen2;
-            border-radius: 30em;
-            background-color: var(--color_5);
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            width: 10em;
-            border: solid rgb(172, 97, 53) 0.2rem;
+        grid-area: imagen2;
+        border-radius: 30em;
+        background-color: var(--color_5);
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        width: 12em;
+        border: solid rgb(172, 97, 53) 0.2rem;
         }
 
     .amigurumis__parrafo{
@@ -137,6 +140,10 @@
         color: var(--color_3);
         width: max-content;
         justify-self: center;
+        border: #96461c solid 0.2em;
+        width: max-content;
+        height: max-content;
+        padding: 5%;
     }
 
     .img3{
@@ -203,6 +210,7 @@
         align-items: center;
         border-radius: 5em;
         max-width: 100%;
+        border: solid #221006 0.2em;
     }
     .contenedor__titulo{
         font-family: var(--text_family1);
@@ -211,7 +219,7 @@
 
     .contenedor__parrafo{
         font-family: var(--text_family2);
-        font-size: var(--texzise_text);
+        font-size: var(--textzise_text);
     }
 
     .contenedor__cuerpo2{
@@ -223,6 +231,7 @@
         align-items: center;
         border-radius: 5em;
         max-width: 100%;
+        border: solid #221006 0.2em;
     }
 
     .contenedor__cuerpo3{
@@ -234,6 +243,7 @@
         align-items: center;
         border-radius: 5em;
         max-width: 100%;
+        border: solid #221006 0.2em;
     }
 
     .contenedor__cuerpo4{
@@ -245,6 +255,7 @@
         align-items: center;
         border-radius: 5em;
         max-width: 100%;
+        border: solid #221006 0.2em;
     }
 
     .contenedor__cuerpo5{
@@ -256,6 +267,7 @@
         align-items: center;
         border-radius: 5em;
         max-width: 100%;
+        border: solid #221006 0.2em;
     }
 
     /*Productos*/
