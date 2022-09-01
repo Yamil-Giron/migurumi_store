@@ -19,16 +19,13 @@
         background-color: var(--color_background);
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.3fr 1fr 1fr 1fr;
         grid-template-areas:
         "encabezado"
         "amigurumis"
         "comoadoptar"
-        "productos"
-        "pie";
-        width: auto;
-        max-width: max-content;
-        min-width: min-content;
+        "piedepagina";
+        width: 100%;
         height: 300px;
         row-gap: 3em;
     }
@@ -41,22 +38,21 @@
         grid-template-areas: 
         "logo titulo";
         background-color: var(--color_1);
-        width: auto;
+        width: 100%;
+        justify-items: stretch;
     }
     .encabezado{
         grid-area: titulo;
         display: flex;
-        width: auto;
+        width: 100%;
         justify-content: center;
         align-items: center;
-        margin-right: 1.2em;
     }
 
     .encabezado__titulo{
         font-size: var(--textzise_subtitle);
         font-family: var(--text_family1);
         color: var(--color_3);
-        padding: 1%;
     }
     .navegación{
         grid-area: logo;
@@ -81,19 +77,16 @@
     }
 
     .contenedoramigurumis{
-        grid-area:amigurumis;
+        grid-area: amigurumis;
         display:grid;
-        width: 100%;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas: "titulo"
-        "cuerpo";
-        background-color: var(--color_3);
+        grid: repeat(2,1fr)/1fr;
+        grid-template-areas: "titulo" "cuerpo";
     }
 
     .amigurumis__contenedortitulo{
         grid-area: titulo;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
@@ -106,35 +99,44 @@
     .amigurumis__contenedorcuerpo{
         grid-area: cuerpo;
         display: grid;
-        grid-template-columns: 1fr repeat(2, 2fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-areas: 
-        "parrafo parrafo"
-        "imagen1 imagen2";
-        height: max-content;
-        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "parrafo" "imagen1 imagen2";
     }
 
-    .amigurumis__contenedorcuerpo .img1{
+    .img1{
         grid-area: imagen1;
         border-radius: 30em;
         background-color: var(--color_5);
         display: flex;
-        justify-self: center;
-        align-self: center;
+        justify-content: center;
+        align-content: center;
         width: 10em;
         border: solid rgb(172, 97, 53) 0.2rem;
-    }
+        }
 
-    .amigurumis__contenedorcuerpo .img2{
-        grid-area: imagen2;
-        border-radius: 30em;
+    .img2{
+            grid-area: imagen2;
+            border-radius: 30em;
+            background-color: var(--color_5);
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            width: 10em;
+            border: solid rgb(172, 97, 53) 0.2rem;
+        }
+
+    .amigurumis__parrafo{
+        grid-area: parrafo;
         background-color: var(--color_5);
         display: flex;
+        font-size: var(--textzise_text);
+        font-family: var(--text_family2);
+        border-radius: 5em;
+        text-align:center;
+        color: var(--color_3);
+        width: max-content;
         justify-self: center;
-        align-self: center;
-        width: 10em;
-        border: solid rgb(172, 97, 53) 0.2rem;
     }
 
     .img3{
@@ -144,21 +146,6 @@
 
     .img4{
         display:none;
-    }
-
-    .amigurumis__parrafo{
-        grid-area: parrafo;
-        background-color: var(--color_5);
-        display: flex;
-        justify-items: center;
-        align-items: center;
-        font-size: var(--textzise_text);
-        font-family: var(--text_family2);
-        border: 0.5rem solid rgb(172, 97, 53);
-        border-radius: 5em;
-        text-align:center;
-        color: var(--color_3);
-        width: 100%;
     }
 
     /*Como adoptar*/
@@ -172,7 +159,7 @@
         "cuerpo";
         row-gap: 1em;
         border-radius: 5em;
-        border: rgb(34, 16, 6) solid 0.2em;
+        width: 100%;
     }
 
     .comoadoptar__contenedortítulo{
@@ -193,7 +180,7 @@
     .comoadoptar__contenedorcuerpo{
         display: grid;
         grid-area: cuerpo;
-        grid-template-columns: 0.5fr;
+        grid-template-columns: 1fr;
         grid-template-rows: repeat(5, 1fr);
         row-gap: 2em;
         grid-template-areas: 
@@ -215,10 +202,7 @@
         justify-content: space-around;
         align-items: center;
         border-radius: 5em;
-        border:0.5rem solid rgb(150, 70, 28);
         max-width: 100%;
-        position: relative;
-        left: -30%;
     }
     .contenedor__titulo{
         font-family: var(--text_family1);
@@ -230,16 +214,6 @@
         font-size: var(--texzise_text);
     }
 
-    .contenedor__cuerpo1:hover,.contenedor__cuerpo2:hover, .contenedor__cuerpo3:hover, .contenedor__cuerpo4:hover, .contenedor__cuerpo5:hover{
-    padding: 1em;
-    width: 120%;
-    left: -10%;
-    color: var(--color_3);
-    background-color: var(--color_5);
-    transition-property: padding, width, left, background-color, color;
-    transition-duration: 1s, 3s, 2s, 2s, 2s;
-    }
-
     .contenedor__cuerpo2{
         grid-area: contenedor2;
         display: flex;
@@ -248,10 +222,7 @@
         justify-content: space-around;
         align-items: center;
         border-radius: 5em;
-        border:0.5rem solid rgb(150, 70, 28);
         max-width: 100%;
-        position: relative;
-        left: -30%;
     }
 
     .contenedor__cuerpo3{
@@ -262,10 +233,7 @@
         justify-content: space-around;
         align-items: center;
         border-radius: 5em;
-        border:0.5rem solid rgb(150, 70, 28);
         max-width: 100%;
-        position: relative;
-        left: -30%;
     }
 
     .contenedor__cuerpo4{
@@ -276,10 +244,7 @@
         justify-content: space-around;
         align-items: center;
         border-radius: 5em;
-        border:0.5rem solid rgb(150, 70, 28);
         max-width: 100%;
-        position: relative;
-        left: -30%;
     }
 
     .contenedor__cuerpo5{
@@ -290,140 +255,32 @@
         justify-content: space-around;
         align-items: center;
         border-radius: 5em;
-        border:0.5rem solid rgb(150, 70, 28);
         max-width: 100%;
-        position: relative;
-        left: -30%;
     }
 
     /*Productos*/
 
     .contenedorproductos{
-        padding: 2em;
-        grid-area: productos;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
-        background-color: var(--color_3);
-        border:0.2rem solid rgb(34, 16, 6);
-        border-radius: 5em;
-        grid-template-areas: 
-        "introducción"
-        "uno"
-        "dos"
-        "tres";
-        text-align: center;
-        margin-left: 2em;
+        display: none;
     }
-    .productos__introducción{
-        grid-area: introducción;
-        display:flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;   
-    }
-
-    .productos__uno{
-        grid-area: uno;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .productos__dos{
-        grid-area: dos;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .productos__tres{
-        grid-area: tres;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .contenedorproductos h3, .contenedorproductos h4{
-        font-size: var(--textzise_subtitle);
-        font-family: var(--text_family1);
-    }
-
-    .contenedorproductos p{
-        font-size: var(--texzise_text);
-        font-family: var(--text_family2);
-    }
-
-    .contenedorproductos img{
-        width: 16em;
-        border: solid #ac6135;
-        border-radius: 5em;
-    }
+    
 
     /*Promociones*/
     .contenedorpromociones{
-        grid-area: promociones;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-        color: var(--color_5);
-        row-gap: 3em;
-        margin-right: 2em;
-    }
-
-    .deque__contenedor{
-        background-color: var(--color_3);
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-around;
-        border: solid #221006 0.2em;
-        border-radius: 5em;
-        padding: 1em;
-        text-align: center;
-    }
-
-    .donde__contenedor{
-        background-color: var(--color_3);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        border: solid #221006 0.2em;
-        border-radius: 5em;
-        padding: 1em;
-        text-align: center;
-    }
-
-    .contenedorpromociones h3, .contenedorpromociones h4{
-        font-family: var(--text_family1);
-        font-size: 1.6em;
-    }
-
-    .contenedorpromociones p{
-        font-family: var(--text_family2);
-        font-size: var(--texzise_text);
-    }
-
-    .contenedorpromociones img{
-        width: 15em;
-        border: solid #ac6135;
-        border-radius: 5em;
+        display: none;
     }
 
 
     /*Pie de pagina*/
     .contenedorpiepagina{
-        grid-area: piepagina;
+        grid-area: piedepagina;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         background-color: var(--color_5);
         color: var(--color_3);
         border-radius: 3em 3em 0em 0em;
-        border: solid 0.5em
+        width: 100%;
     }
     
     .pie{
@@ -448,11 +305,6 @@
 
     .pie__atención a img, .pie__soporte a img, .pie__siguenos a img, .pie__reseñas a img{
         width: 4em;
-    }
-    
-    .pie__atención a img:hover, .pie__soporte a img:hover, .pie__siguenos a img:hover, .pie__reseñas a img:hover{
-        filter:brightness(300%);
-        transition: 1s;
     }
 }
 
